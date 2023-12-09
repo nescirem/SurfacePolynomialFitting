@@ -2,6 +2,7 @@
 N-order polynomial surface fitting with Eigen (Least squares). Usage: `SPF ${N}`，N can be any natural number.
 
 * N=2
+
 $$
 f(x,y) = C_{00}+C_{01}y+C_{02}y^2+C_{10}x+C_{11}xy+C_{20}x^2
 $$
