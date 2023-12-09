@@ -2,6 +2,7 @@
 N-order polynomial surface fitting with Eigen. Usage: `SPF ${N}`，N can be any natural number.
 
 * N=2
+  
   $$
   f(x,y) = C_{00}+C_{01}y+C_{02}y^2+C_{10}x+C_{11}xy+C_{20}x^2
   $$
@@ -13,6 +14,7 @@ N-order polynomial surface fitting with Eigen. Usage: `SPF ${N}`，N can be any 
 ![image-20231209230316793](media\image-20231209230316793.png)
 
 * N=3
+  
   $$
   f(x,y) = C_{00}+C_{01}y+C_{02}y^2+C_{03}y^3+C_{10}x+C_{11}xy+C_{12}xy^2+C_{20}x^2+C_{21}x^2y+C_{30}x^3
   $$
