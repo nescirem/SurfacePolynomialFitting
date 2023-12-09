@@ -1,0 +1,6 @@
+[submodule "extern/eigen"]
+	path = extern/eigen
+	url = https://github.com/libigl/eigen.git
+[submodule "extern/rapidcsv"]
+	path = extern/rapidcsv
+	url = https://github.com/d99kris/rapidcsv.git
