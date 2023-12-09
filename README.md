@@ -1,5 +1,17 @@
 # SurfacePolynomialFitting
-N-order polynomial surface fitting with Eigen (Least squares). Usage: `SPF ${N}`，N can be any natural number.
+N-order polynomial surface fitting with Eigen (Least squares). Usage: 
+
+## Usage
+
+```
+git clone -b main --recursive https://github.com/nescirem/SurfacePolynomialFitting.git 
+cd SurfacePolynomialFitting
+mkdir build && cd build
+cmake ..
+make
+```
+
+Execute`./SPF ${N}`，N can be any natural number.
 
 * N=2
 
