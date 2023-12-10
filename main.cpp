@@ -63,6 +63,7 @@ Data loadDataMatrix()
         std::vector<double> zs = doc.GetColumn<double>(i);
         for (size_t j = 0; j < zs.size(); ++j)
         {
+            if (!std::isfinite(zs[j])) continue;
             data.points[id].x = col_titles[i];
             data.points[id].y = row_titles[j];
             data.points[id].z = zs[j];
@@ -96,7 +97,7 @@ int main(int argc, char *argv[]) {
 
     Data data = loadDataMatrix();
     int m = data.n_col * data.n_row;
-    if (m < 4)
+    if (m < 3)
     {
         std::cerr << "Bad data input!" << std::endl;
     }
