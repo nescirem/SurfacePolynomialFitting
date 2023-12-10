@@ -185,7 +185,7 @@ $$
 1 & \sum_{k=1}^my_k & \sum_{k=1}^my_k^2 & \sum_{k=1}^my_k^3 & \sum_{k=1}^mx_k & \sum_{k=1}^mx_ky_k & \sum_{k=1}^mx_ky_k^2 & \sum_{k=1}^mx_k^2 & \sum_{k=1}^mx_k^2y_k & \sum_{k=1}^mx_k^3 \\\
 1 & \sum_{k=1}^my_k & \sum_{k=1}^my_k^2 & \sum_{k=1}^my_k^3 & \sum_{k=1}^mx_k & \sum_{k=1}^mx_ky_k & \sum_{k=1}^mx_ky_k^2 & \sum_{k=1}^mx_k^2 & \sum_{k=1}^mx_k^2y_k & \sum_{k=1}^mx_k^3 \\\
 1 & \sum_{k=1}^my_k & \sum_{k=1}^my_k^2 & \sum_{k=1}^my_k^3 & \sum_{k=1}^mx_k & \sum_{k=1}^mx_ky_k & \sum_{k=1}^mx_ky_k^2 & \sum_{k=1}^mx_k^2 & \sum_{k=1}^mx_k^2y_k & \sum_{k=1}^mx_k^3 
-\end{bmatrix} 
+\end{bmatrix}
 $$
 
 $$
@@ -214,6 +214,19 @@ z_5
 \end{bmatrix}
 $$
 
-That's all.
+The $\vec{\mathbf{c}}$ is ordered as: 
 
-![image-20231209232155304](media/image-20231209232155304.png)
+![image-20231210175915518](media/image-20231210175915518.png)
+
+U can change this order as:
+
+![image-20231210180047391](media/image-20231210180047391.png)
+
+by change that code:
+
+```cpp
+//X(k, index++) = std::pow(x, i) * std::pow(y, j); // C_{00},C{01},...
+X(k, index++) = std::pow(x, j) * std::pow(y, i); // C_{00},C_{10},...
+```
+
+That's all.

@@ -78,7 +78,6 @@ double calculateR2(const Eigen::VectorXd& observed, const Eigen::VectorXd& predi
     double totalSumOfSquares = (observed.array() - meanObserved).square().sum();
     double residualSumOfSquares = (observed - predicted).array().square().sum();
 
-    // R-squared formula
     double rSquared = 1.0 - (residualSumOfSquares / totalSumOfSquares);
     return rSquared;
 }
@@ -115,7 +114,8 @@ int main(int argc, char *argv[]) {
         int index = 0;
         for (int i = 0; i <= N; ++i) {
             for (int j = 0; j <= N - i; ++j) {
-                X(k, index++) = std::pow(x, i) * std::pow(y, j);
+                X(k, index++) = std::pow(x, i) * std::pow(y, j); // C_{00},C{01},...
+                //X(k, index++) = std::pow(x, j) * std::pow(y, i); // C_{00},C_{10},...
             }
         }
         Z(k) = z;
